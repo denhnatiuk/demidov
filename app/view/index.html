@@ -302,7 +302,9 @@
       <div class="row">
         <div class="container-fluid section contacts">
           <div class="row">
-            <div id="map"></div>
+            <div id="map">
+              <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%90%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85%20%D0%9F%D0%B0%D1%80%D1%82%D0%B8%D0%B7%D0%B0%D0%BD%2C%20136&key=AIzaSyD3G69mDMmAV5ki0EoLK4u2rU0OqWTgvb4" allowfullscreen></iframe>
+            </div>
             <a href="#" class="contacts-label center-block"></a>
             <div class="container ">
               <nav class="navbar contacts-nav hidden-xs">
@@ -317,11 +319,13 @@
               </nav>
             </div>
             <div class="container">
-              <div class="row ">
-                <div class="col-md-4">
-                  <div class="well city">
-                    <p class="lead gold">Абинск</p>
-                    <p class="small white">фабрика, салон</p>
+              <div id="accordion" class="row">
+                  <div class="col-xs-10 col-xs-push-1 col-md-4 city">
+                    <input type="radio" name="accords" id="city-1" checked/>
+            				<label for="city-1">
+                      <p class="lead gold">Абинск</p>
+                      <p class="small white">фабрика, салон</p>
+                    </label>
                     <ul>
                       <li class="address">
                         <a href="#map" onclick="alert("make onclick map event");">
@@ -335,43 +339,63 @@
                       <li class="schedule">Пн-Пт: 09:00-18:00</li>
                     </ul>
                   </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="well city">
+                  <div class="col-xs-10 col-xs-push-1 col-md-4 city">
+                    <input type="radio" name="accords" id="city-2" />
+            				<label for="city-2">
                       <p class="lead gold">Санкт-Петербург</p>
                       <p class="small white">салон</p>
-                      <ul>
-                        <li class="address">
-                          <a href="#map" onclick="alert("make onclick map event");">
-                            <address>ул. Красных Партизан, 136</address>
-                          </a>
-                        </li>
-                        <li class="email">
-                          <a href="mailto:mebel.demidov@gmail.com?subject=feedback">mebel.demidov@gmail.com</a>
-                        </li>
-                        <li class="tel"><a href="tel:+7-989-289-09-09">+7-989-289-09-09</a></li>
-                        <li class="schedule">Пн-Пт: 09:00-18:00</li>
-                      </ul>
+                    </label>
+                    <ul>
+                      <li class="address">
+                        <a href="#map" onclick="alert("make onclick map event");">
+                          <address>ул. Красных Партизан, 136</address>
+                        </a>
+                      </li>
+                      <li class="email">
+                        <a href="mailto:mebel.demidov@gmail.com?subject=feedback">mebel.demidov@gmail.com</a>
+                      </li>
+                      <li class="tel"><a href="tel:+7-989-289-09-09">+7-989-289-09-09</a></li>
+                      <li class="schedule">Пн-Пт: 09:00-18:00</li>
+                    </ul>
                   </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="well city">
+                  <div class="col-xs-10 col-xs-push-1 col-md-4 city">
+                    <input type="radio" name="accords" id="city-3" />
+            				<label for="city-3">
                       <p class="lead gold">Краснодар</p>
                       <p class="small white">салон</p>
-                      <ul>
-                        <li class="address">
-                          <a href="#map" onclick="alert("make onclick map event");">
-                            <address>ул. Красных Партизан, 136</address>
-                          </a>
-                        </li>
-                        <li class="email">
-                          <a href="mailto:mebel.demidov@gmail.com?subject=feedback">mebel.demidov@gmail.com</a>
-                        </li>
-                        <li class="tel"><a href="tel:+7-989-289-09-09">+7-989-289-09-09</a></li>
-                        <li class="schedule">Пн-Пт: 09:00-18:00</li>
-                      </ul>
+                    </label>
+                    <ul>
+                      <li class="address">
+                        <a href="#map" onclick="alert("make onclick map event");">
+                          <address>ул. Красных Партизан, 136</address>
+                        </a>
+                      </li>
+                      <li class="email">
+                        <a href="mailto:mebel.demidov@gmail.com?subject=feedback">mebel.demidov@gmail.com</a>
+                      </li>
+                      <li class="tel"><a href="tel:+7-989-289-09-09">+7-989-289-09-09</a></li>
+                      <li class="schedule">Пн-Пт: 09:00-18:00</li>
+                    </ul>
                   </div>
-                </div>
+                  <script>
+                    // script for changing map locations on radio-checked
+                      var cities = document.getElementById('accordion').accords;
+                      var coords = [
+                        "%D0%90%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85%20%D0%9F%D0%B0%D1%80%D1%82%D0%B8%D0%B7%D0%B0%D0%BD%2C%20136",
+                        "%D0%90%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85%20%D0%9F%D0%B0%D1%80%D1%82%D0%B8%D0%B7%D0%B0%D0%BD%2C%20136",
+                        "%D0%90%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85%20%D0%9F%D0%B0%D1%80%D1%82%D0%B8%D0%B7%D0%B0%D0%BD%2C%20136",
+                      ]
+                      var prev = null;
+                      for(var i = 0; i < cities.length; i++) {
+                        cities[i].onclick = function() {
+                          (prev)? console.log(prev.value):null;
+                          if(this !== prev) {
+                             prev = this;
+                          }
+                          console.log(this.value)
+                        };
+                      }
+                  </script>
               </div>
               <div class="row visible-xs">
 
