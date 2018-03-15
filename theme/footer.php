@@ -2,7 +2,7 @@
         <div class="container-fluid section contacts">
           <div class="row">
             <div id="map">
-                <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=%D0%90%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85%20%D0%9F%D0%B0%D1%80%D1%82%D0%B8%D0%B7%D0%B0%D0%BD%2C%20136&key=AIzaSyD3G69mDMmAV5ki0EoLK4u2rU0OqWTgvb4" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed/v1/place?q=%D0%90%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D1%85%20%D0%9F%D0%B0%D1%80%D1%82%D0%B8%D0%B7%D0%B0%D0%BD%2C%20136&key=AIzaSyD3G69mDMmAV5ki0EoLK4u2rU0OqWTgvb4" allowfullscreen></iframe>
             </div>
             <div class="contacts-label-block">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="contacts-label center-block"></a>
@@ -15,12 +15,12 @@
                   <div class="col-xs-10 col-xs-push-1 col-sm-4 col-sm-push-0 city">
                     <input type="radio" name="accords" id="city-1" checked/>
             		<label for="city-1">
-                      <p class="lead gold">Абинск</p>
-                      <p class="small white">фабрика, салон</p>
+                      <span class="lead gold">Абинск</span>
+                      <span class="small white">фабрика, салон</span>
                     </label>
                     <ul>
                       <li class="address">
-                        <a href="#map" onclick="alert("make onclick map event");">
+                        <a href="#map" onclick="">
                           <address>ул. Красных Партизан, 136</address>
                         </a>
                       </li>
@@ -34,12 +34,12 @@
                   <div class="col-xs-10 col-xs-push-1 col-sm-4 col-sm-push-0 city">
                     <input type="radio" name="accords" id="city-2" />
             		<label for="city-2">
-                      <p class="lead gold">Санкт-Петербург</p>
-                      <p class="small white">салон</p>
+                      <span class="lead gold">Санкт-Петербург</span>
+                      <span class="small white">салон</span>
                     </label>
                     <ul>
                       <li class="address">
-                        <a href="#map" onclick="alert("make onclick map event");">
+                        <a href="#map" onclick="">
                           <address>ул. Красных Партизан, 136</address>
                         </a>
                       </li>
@@ -53,12 +53,12 @@
                   <div class="col-xs-10 col-xs-push-1 col-sm-4 col-sm-push-0 city">
                     <input type="radio" name="accords" id="city-3" />
             		<label for="city-3">
-                      <p class="lead gold">Краснодар</p>
-                      <p class="small white">салон</p>
+                      <span class="lead gold">Краснодар</span>
+                      <span class="small white">салон</span>
                     </label>
                     <ul>
                       <li class="address">
-                        <a href="#map" onclick="alert("make onclick map event");">
+                        <a href="#map" onclick="">
                           <address>ул. Красных Партизан, 136</address>
                         </a>
                       </li>
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-    </div>
+
     <footer class="footer">
       <div class="container footer-box">
         <div class="policy">
@@ -90,7 +90,7 @@
       </div>
     </footer>
     <!--scripts-->
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <!--<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>-->
     <script>window.jQuery || document.write('<script src="/wp-content/themes/demidov/js/jquery.min.js"><\/script>');</script> 
 
     <?php

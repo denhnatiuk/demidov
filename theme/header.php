@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no">
     <!-- safari 9 bug fix --><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +23,10 @@
     <link rel="icon" type="image/png" href="128.png" sizes="128x128">
 
     <!-- scripts -->
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
     
     
@@ -89,9 +92,13 @@
             <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
           </div>
         </div>
-        <div class="scroll">
+          <?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>
+          	<a href="#content" class="menu-scroll-down">
+          	  <div class="scroll">
 
-        </div>
+              </div>
+          	</a>
+          <?php endif; ?>
       </div>
     </header>
     <div class="container-fluid">

@@ -1,12 +1,14 @@
 
 
-        <nav id="navbar" class="navbar">
-          <script type="text/javascript">
-            let sandwich = document.getElementById("navbar");
+        <nav id="site-navigation" class="main-navigation navbar" role="navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentyseventeen' ); ?>">
+          <script>
+            let sandwich = document.getElementById("site-navigation");
+            let menu = document.getElementsByClassName('menu-top-navigation-container');
             let viewport = window.innerWidth;
-            if (viewport < 640) {
-              sandwich.className += " navbar-default navbar-fixed-top"
-            }
+            if (viewport < 768) {
+              sandwich.className += " navbar-default navbar-fixed-top";
+              }
+            menu.className += " navbar-collapse";
           </script>
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
@@ -16,14 +18,10 @@
               <span class="icon-bar"></span>
             </button>
           </div>
-          <div class="collapse navbar-collapse" id="bs-navbar-collapse">
-            <a href="#" class="nav-item">Коллекции</a>
-            <a href="#" class="nav-item">Проекты</a>
-            <a href="#" class="nav-item">Преимущества</a>
-            <a href="#" class="nav-item">Интернет-магазин</a>
-            <a href="#" class="nav-item">Новости</a>
-            <a href="#" class="nav-item">История</a>
-            <a href="#" class="nav-item">Производство</a>
-            <a href="#" class="nav-item">Контакты</a>
-          </div>
-        </nav>
+          <div class="navbar-collapse">
+            <?php wp_nav_menu( array(
+            		'theme_location' => 'top',
+            		'menu_id'        => 'bs-navbar-collapse',
+            ) ); ?>
+                      </div>
+        </nav><!-- #site-navigation -->

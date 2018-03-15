@@ -526,3 +526,6 @@ address {
 
 #map .login {
   display: none !important; }
+
+.left-image-block > div, .right-image-block > div, .video-embed > div {
+  padding: 0; }

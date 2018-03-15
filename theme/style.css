@@ -8,6 +8,11 @@
  Version:        0.1.0
 */
 
+h1, h2 {
+  font-family: 'Nexa Script Regular';
+  
+}
+
 a {
   color: #fff; }
 
@@ -176,8 +181,12 @@ a:hover {
     width: 100%;
     padding: 0;
     overflow: hidden; }
+  #site-navigation{
+    width: 100vw;
+  }
   .navbar {
-    width: 100%; }
+    width: 100%; 
+   }
   .navbar, .navbar-header, .navbar-toggle {
     background-color: transparent;
     color: #fff;
@@ -191,13 +200,15 @@ a:hover {
   .navbar-collapse {
     padding: 0; 
     overflow: hidden;
+    text-indent: -999px;
   }
   .navbar-fixed-top .navbar-collapse{
-    max-height: 100vh
+    max-height: 100vh;
+    max-width: 100%;
   }
-  .navbar-collapse.collapse.in {
+  .navbar-collapse .collapse.in {
     background-color: rgba(0, 0, 0, 0.75); }
-    .navbar-collapse.collapse.in .nav-item {
+    .navbar-collapse .collapse.in .menu-item {
       display: block;
       width: 100%;
       height: 6rem;
@@ -206,9 +217,10 @@ a:hover {
       padding-right: 0;
       padding-top: 2rem;
       padding-bottom: 2rem;
+      text-indent: 14px;
       font-size: 1.5rem;
       color: #fff; }
-      .navbar-collapse.collapse.in .nav-item:after {
+      .navbar-collapse .collapse.in .menu-item:after {
         content: "";
         display: block;
         margin-left: -20px;
@@ -220,7 +232,7 @@ a:hover {
         background-color: #d3ab65;
         border: 1px solid #d3ab65;
         border-radius: 10px; }
-      .navbar-collapse.collapse.in .nav-item:last-child:after {
+      .navbar-collapse .collapse.in .menu-item:last-child:after {
         display: none; }
   .item.visible-xs-block .carousel-caption {
     left: 0; }
@@ -402,9 +414,9 @@ a:hover {
 .brand-logo {
   max-width: 50%; }
 
-.nav-item {
+.menu-item {
   margin-left: 2rem; }
-  .nav-item:after {
+  .menu-item:after {
     content: "";
     display: inline-block;
     width: 5px;
@@ -415,7 +427,7 @@ a:hover {
     background-color: #d3ab65;
     border: 1px solid #d3ab65;
     border-radius: 10px; }
-  .nav-item:last-child:after {
+  .menu-item:last-child:after {
     display: none; }
 
 #top-carousel {
@@ -441,24 +453,98 @@ a:hover {
 .visible-xs-block .carousel-caption {
   position: relative; }
 
+/*======================================collection===================================================*/
+
 .collection {
   padding-bottom: 50px; }
   .collection > .container {
     border: 1px solid #d3ab65; }
     .collection > .container a {
-      height: 375px;
-      margin: 15px;
       float: left; }
-  .collection .collection .jumbotron {
-    margin: 10px; }
+      
+.collection .tumbnail{
+    width:100%;
+    height: 300px;
+  }
+.tumbnail.kitchen{
+  background:url(/wp-content/themes/demidov/assets/images/kitchen_mono.png), linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 18%, rgba(255,255,255,0.85) 59%, rgba(255,255,255,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.kitchen:hover{
+  background-image:url(/wp-content/themes/demidov/assets/images/kitchen_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+.tumbnail.kitchen a, .tumbnail.daily a, .tumbnail.sleeproom a, .tumbnail.doors a, .tumbnail.interior a{
+  display: none;
+}
+.tumbnail.kitchen:hover a, .tumbnail.daily:hover a, .tumbnail.sleeproom:hover a, .tumbnail.doors:hover a, .tumbnail.interior:hover a{
+  display: block;
+}
 
+.tumbnail.daily{
+  background: url(/wp-content/themes/demidov/assets/images/daily_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 18%, rgba(226,226,226,0.85) 59%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.daily:hover{
+  background: url(/wp-content/themes/demidov/assets/images/daily_rgb.png);
+  background-position: center;
+  background-size: 150%;
+  background-repeat: no-repeat;
+}
+.tumbnail.sleeproom{
+  background: url(/wp-content/themes/demidov/assets/images/kitchen_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 18%, rgba(226,226,226,0.85) 59%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.sleeproom:hover{
+  background: url(/wp-content/themes/demidov/assets/images/kitchen_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+.tumbnail.doors{
+  background: url(/wp-content/themes/demidov/assets/images/doors_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 18%, rgba(226,226,226,0.85) 59%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.doors:hover{
+  background-image:url(/wp-content/themes/demidov/assets/images/doors_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+.tumbnail.interior{
+  background:url(/wp-content/themes/demidov/assets/images/interior_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 18%, rgba(226,226,226,0.85) 59%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.interior:hover{
+  background-image:url(/wp-content/themes/demidov/assets/images/interior_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
 .tumbnail {
-  height: 350px;
+  /*height: 350px;*/
   margin-top: 15px;
   margin-bottom: 15px; }
   .tumbnail .tumbnail-description {
-    position: relative;
-    top: -300px;
+    position: absolute;
+    top: 50px;
     padding: 50px; }
 
 .history, .services, .quality {
@@ -559,13 +645,113 @@ address {
 
 /*contact boxes*/
 
+/*navbar top-menu*/
 
+#bs-navbar-collapse{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  list-style-type: none;
+}
 
+/*==========history============*/
+.left-image-block>div, .right-image-block>div, .video-embed>div{
+  padding: 0;
+}
 
+/*===========================advantages=============================*/
+.advantages {
+  padding-bottom: 50px; }
+  .advantages > .container {
+    border: 1px solid #d3ab65; }
+    .advantages > .container a {
+      float: left; }
+      
+.advantages .tumbnail{
+    width:100%;
+    height: 300px;
+  }
+  .advantages .modeling{
+    width:100%;
+    height: 615px;
+  }
+.tumbnail.assembly{
+  background:url(/wp-content/themes/demidov/assets/images/assembly_mono.png), linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0.96) 18%, rgba(255,255,255,0.85) 59%, rgba(255,255,255,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.assembly:hover{
+  background-image:url(/wp-content/themes/demidov/assets/images/assembly_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+.tumbnail.assembly a, .tumbnail.delivery a, .tumbnail.projecting a, .tumbnail.warranty a, .tumbnail.modeling a{
+  display: none;
+}
 
-
-
-
+.tumbnail.delivery{
+  background: url(/wp-content/themes/demidov/assets/images/delivery_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 18%, rgba(226,226,226,0.85) 59%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.delivery:hover{
+  background: url(/wp-content/themes/demidov/assets/images/delivery_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+.tumbnail.projecting{
+  background: url(/wp-content/themes/demidov/assets/images/projecting_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 18%, rgba(226,226,226,0.85) 59%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.projecting:hover{
+  background: url(/wp-content/themes/demidov/assets/images/projecting_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+.tumbnail.warranty{
+  background: url(/wp-content/themes/demidov/assets/images/warranty_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 18%, rgba(226,226,226,0.85) 59%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.warranty:hover{
+  background-image:url(/wp-content/themes/demidov/assets/images/warranty_rgb.png);
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+}
+.tumbnail.modeling {
+  background:url(/wp-content/themes/demidov/assets/images/modeling_mono.png), linear-gradient(to bottom, rgba(133,133,133,1) 0%, rgba(133,133,133,0.96) 100%, rgba(226,226,226,0.85) 100%, rgba(254,254,254,0.75) 100%);
+  background-position: center;
+  background-size: 350%;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#858585', endColorstr='#fefefe', GradientType=0 );
+}
+.tumbnail.modeling:hover{
+  background-image:url(/wp-content/themes/demidov/assets/images/modeling_rgb.png);
+  background-position: center;
+  background-size: 350%;
+  background-repeat: no-repeat;
+}
+.tumbnail {
+  /*height: 350px;*/
+  margin-top: 15px;
+  margin-bottom: 15px; }
+.tumbnail.delivery .tumbnail-description, .tumbnail.warranty .tumbnail-description {
+    position: absolute;
+    top: 330px;
+    padding: 50px; }
 
 
 
