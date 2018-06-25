@@ -1,0 +1,106 @@
+#top {
+  background-image: url(../images/top-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.history{
+  background-image: url(../images/history.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.quality{
+  background-image: url(../images/quality.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services{
+  background-image: url(../images/services.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.scroll{
+    background-image: url(../images/mouse.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 9rem;
+    width: 3rem;
+}
+.scroll:before{
+  content: "";
+  height: 2rem;
+  position: relative;
+  margin-left: 1.5rem;
+  border: 1px solid #d3ab65;
+}
+.scroll:after{
+  content: "";
+  height: 2rem;
+  position: absolute;
+  margin-left: -2px;
+  margin-top: 7rem;
+  border: 1px solid #d3ab65;
+}
+// ============================================================================collection
+.tumbnail-img{
+  width: 100%;
+}
+// =============================================================================history
+// =============================================================================calculation
+.calculation{
+  background-image: url(../images/cta.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+}
+// =============================================================================news
+.news-item{
+  background-image: url(../images/news.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:hover{
+    background-image: url(../images/news_hovered.png);
+  }
+}
+// =============================================================================contacts
+#map{
+  background-image: url(../images/map.png);
+}
+.contacts-label{
+  background-image: url(../images/label_gold.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+// =============================================================================footer
+.vkontakte{
+  background-image: url(../images/social.png);
+  background-position: left;
+  background-size: 300%;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  &:hover{
+    filter: none;
+  }
+}
+.vk{
+  background-image: url(../images/social.png);
+  background-position: center;
+  background-size: 300%;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  &:hover{
+    filter: none;
+  }
+}
+.facebook{
+  background-image: url(../images/social.png);
+  background-position: right;
+  background-size: 300%;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  &:hover{
+    filter: none;
+  }
+}
